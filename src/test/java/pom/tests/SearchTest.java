@@ -1,6 +1,7 @@
 package pom.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pom.pages.MobileSearchPage;
@@ -18,10 +19,11 @@ public class SearchTest {
     }
 
     @Test
-    public void searchForIphone(){
+    public void searchForIphone() throws InterruptedException {
         mobileSearchPage.searchMobile("iPhone");
     }
 
+    @AfterMethod
     public void tearDown(){
         WebDriver webDriver = TreadLocalWebDriver.getWebDriver();
         if(webDriver !=null){
