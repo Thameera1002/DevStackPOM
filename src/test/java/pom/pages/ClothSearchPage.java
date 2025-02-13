@@ -23,9 +23,11 @@ public class ClothSearchPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void searchClothing(String clothingItem){
+    public void searchClothing(String clothingItem) throws InterruptedException {
         WebActions.type(searchBox, clothingItem);
+        Thread.sleep(1000);
         WebActions.selectDropdownByText(categoryDropDown,"Clothing, Shoes & Accessories");
+        Thread.sleep(1000);
         WebActions.click(searchButton);
     }
 }
