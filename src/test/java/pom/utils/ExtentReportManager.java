@@ -45,4 +45,10 @@ public class ExtentReportManager {
             extent.flush();
         }
     }
+
+    public static void writeToReport(String text){
+        if(test!=null){
+            test.pass(text);
+        }
+    }
 }
