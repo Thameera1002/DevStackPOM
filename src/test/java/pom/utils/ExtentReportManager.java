@@ -13,7 +13,7 @@ public class ExtentReportManager {
 
     public static void setupReport(){
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter("extent-report.html");
-        sparkReporter.config().setTheme(Theme.DARK);
+        sparkReporter.config().setTheme(Theme.STANDARD);
         sparkReporter.config().setDocumentTitle("Search Item Report");
         sparkReporter.config().setReportName("Search Item Automation Report");
 
